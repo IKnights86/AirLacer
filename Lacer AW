@@ -1,0 +1,66 @@
+"lacer" : {
+		regExpSearch : /^(?=.*(lacer|bender|avatar)).*$/i,
+		name : "Lacer",
+		source : [["HB", 0]],
+		primaryAbility : "\n \u2022 Lacer: Strength or Dexterity;",
+		abilitySave : 5,
+		prereqs : "\n \u2022 Lacer: Dexterity 13 or Strength 13;",
+		improvements : [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5],
+		die : 8,
+		saves : ["Str", "Dex"],
+		skills : ["\n\n" + toUni("Lacer") + ": Choose two from Acrobatics, Arcana, Athletics, Insight, Intimidation, Medicine, and Survival."],
+		armor : [
+			[true, true, false, true]
+		],
+		weapons : [
+			[true, false]
+		],
+		equipment : "Lacer starting equipment:\n \u2022 Leather armor -or-  scale mail;\n \u2022 A scimitar, a quarterstaff, a mace, -or- a rapier;\n \u2022 A dungeoneer's pack -or- an explorer's pack \n\nAlternatively, choose 4d4 \xD7 10 gp worth of starting equipment instead of both the class' and the background's starting equipment.",
+		subclasses : ["Elemental Arts", ["ten animal arts", "eastern shaolin arts", "eight palms arts", "moon arts", "western mantis arts"]],
+		attacks : [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+		spellcastingFactor : 1,
+		spellcastingKnown : {
+			cantrips : [3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+			spells : [0, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16],
+			prepared : false
+		},
+		features : {
+			"spellcasting" : {
+				name : "Spellcasting",
+				source : [["SRD", 52], ["P", 114]],
+				minlevel : 1,
+				description : "\n   " + "I can cast prepared wizard cantrips/spells, using Intelligence as my spellcasting ability" + "\n   " + "I can use an arcane focus as a spellcasting focus" + "\n   " + "I can cast all wizard spells in my spellbook as rituals if they have the ritual tag",
+				additional : ["3 cantrips known", "3 cantrips known", "3 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known"]
+			},
+			"arcane recovery" : {
+				name : "Arcane Recovery",
+				source : [["SRD", 53], ["P", 115]],
+				minlevel : 1,
+				description : "\n   " + "Once per day after a short rest, I can recover a number of 5th-level or lower spell slots",
+				additional : ["1 level of spell slots", "1 level of spell slots", "2 levels of spell slots", "2 levels of spell slots", "3 levels of spell slots", "3 levels of spell slots", "4 levels of spell slots", "4 levels of spell slots", "5 levels of spell slots", "5 levels of spell slots", "6 levels of spell slots", "6 levels of spell slots", "7 levels of spell slots", "7 levels of spell slots", "8 levels of spell slots", "8 levels of spell slots", "9 levels of spell slots", "9 levels of spell slots", "10 levels of spell slots", "10 levels of spell slots"],
+				usages : 1,
+				recovery : "long rest"
+			},
+			"subclassfeature2" : {
+				name : "Arcane Tradition",
+				source : [["SRD", 53], ["P", 115]],
+				minlevel : 2,
+				description : "\n   " + "Choose the Arcane Tradition you studied and put it in the \"Class\" field" + "\n   " + "Choose either the School of Abjuration, Conjuration, Divination, Enchantment," + "\n   " + "Evocation, Illusion, Necromancy, or Transmutation, or become a Bladesinger"
+			},
+			"spell mastery" : {
+				name : "Spell Mastery",
+				source : [["SRD", 53], ["P", 115]],
+				minlevel : 18,
+				description : "\n   " + "By spending 8 hours in study, I can pick a 1st and 2nd-level spell in my spellbook" + "\n   " + "While prepared, I can cast them at their lowest levels without expending spell slots"
+			},
+			"signature spell" : {
+				name : "Signature Spell",
+				source : [["SRD", 54], ["P", 115]],
+				minlevel : 20,
+				description : "\n   " + "Two 3rd-level spells of my choice in my spellbook will always count as prepared" + "\n   " + "I can cast both at third level once per short rest without expending spell slots",
+				recovery : "short rest",
+				usages : 2
+			}
+		}
+	}
+};
