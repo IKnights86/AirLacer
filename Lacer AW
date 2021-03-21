@@ -18,19 +18,25 @@
 		equipment : "Lacer starting equipment:\n \u2022 Leather armor -or-  scale mail;\n \u2022 A scimitar, a quarterstaff, a mace, -or- a rapier;\n \u2022 A dungeoneer's pack -or- an explorer's pack \n\nAlternatively, choose 4d4 \xD7 10 gp worth of starting equipment instead of both the class' and the background's starting equipment.",
 		subclasses : ["Elemental Arts", ["ten animal arts", "eastern shaolin arts", "eight palms arts", "moon arts", "western mantis arts"]],
 		attacks : [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
-		spellcastingFactor : 1,
+		spellcastingFactor : 2,
 		spellcastingKnown : {
-			cantrips : [3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
 			spells : [0, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16],
 			prepared : false
 		},
 		features : {
-			"spellcasting" : {
-				name : "Spellcasting",
-				source : [["SRD", 52], ["P", 114]],
+			"chosen element" : {
+				name : "Chosen Element",
+				source : ["HB", 0],
 				minlevel : 1,
-				description : "\n   " + "I can cast prepared wizard cantrips/spells, using Intelligence as my spellcasting ability" + "\n   " + "I can use an arcane focus as a spellcasting focus" + "\n   " + "I can cast all wizard spells in my spellbook as rituals if they have the ritual tag",
-				additional : ["3 cantrips known", "3 cantrips known", "3 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known"]
+				description : "\n   " + "Choose an element: air or water. From that point on, you are an airlacer or waterlacer. You can't choose another element, even if you later get to choose again",
+				choices : ["Air", "Water"],
+				"air" : {
+					name : "Air Lacer",
+					description : "\n   " + "You gain proficiency with a blowgun and a shanzi, as well as acrobatics, if you are already proficient in acrobatics you become an expert in it. You also gain the benefits of basic Airlacing"
+				}
+				"water" : {
+					name : "Water Lacer",
+					description : "\n   " + "You gain proficiency with a rapier and a whip, as well as athletics, if you are already proficient in athletics you become an expert in it. You also gain the benefits of basic Waterlacing"
 			},
 			"arcane recovery" : {
 				name : "Arcane Recovery",
